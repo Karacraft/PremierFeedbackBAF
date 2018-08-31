@@ -1,0 +1,103 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:gravity="center_vertical|center_horizontal">
+
+    <RelativeLayout
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:padding="20dp"
+
+        >
+
+        <com.igsdigital.premierfeedback.custom.PremierTextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@android:style/TextAppearance.DeviceDefault.Large"
+            android:textColor="@color/colorHeading"
+            android:text="@string/login_title"
+            android:id="@+id/textView_login_title"
+            android:textStyle="bold"/>
+
+        <com.igsdigital.premierfeedback.custom.PremierTextViewMedium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:id="@+id/textView_customer_name"
+            android:layout_below="@id/textView_login_title"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            />
+
+        <EditText
+        android:id="@+id/editText_customer_name"
+        android:hint="@string/prompt_userId"
+        android:layout_below="@id/textView_customer_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+            android:singleLine="true" />
+
+
+        <com.igsdigital.premierfeedback.custom.PremierTextViewMedium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:id="@+id/textView_account_number"
+            android:layout_below="@id/editText_customer_name"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            />
+
+
+    <EditText
+        android:id="@+id/editText_account_number"
+        android:hint="@string/prompt_password"
+        android:inputType="textPassword"
+        android:layout_below="@id/textView_account_number"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true" />
+
+        <ImageView
+            android:id="@+id/imageView_login_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cancel"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/editText_account_number"
+            android:onClick="doCancel"
+            android:layout_marginTop="10dp"
+            />
+
+        <ImageView
+            android:id="@+id/imageView_login_signin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/signin"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/editText_account_number"
+            android:onClick="doLogin"
+            android:layout_marginTop="10dp"
+            />
+
+    <TextView
+        android:id="@+id/textView_login_info"
+        android:layout_below="@id/imageView_login_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+
+

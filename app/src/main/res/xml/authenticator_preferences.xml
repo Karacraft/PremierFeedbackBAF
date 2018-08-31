@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dummy File for info only -->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory
+        android:title="Premier Feedback Authenticator" />
+    <CheckBoxPreference
+        android:key="isDebug"
+        android:summary="Connecting to a debug server instead of production server"
+        android:title="Use debug server" />
+    <SwitchPreference
+        android:key="logsVerbose"
+        android:summary="Increase logging verbosity for LogCat output"
+        android:title="Debug Logs" />
+</PreferenceScreen>

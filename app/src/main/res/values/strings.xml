@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">Premier Feedback</string>
+
+    <!-- Layout Titles -->
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+    <string name="title_activity_feedbackicons">Feedback</string>
+    <string name="title_activity_statistics">Statistics</string>
+    <string name="title_activity_thanks">Thanks</string>
+    <string name="title_activity_questions">Questions</string>
+    <string name="title_customerlistview">Customers</string>
+
+    <!-- Dashboard Layout -->
+    <string name="dashboard_title">DASHBOARD</string>
+    <string name="customer_view_title">CUSTOMER DETAILS</string>
+
+    <!-- Login Layout -->
+    <string name="login_title">LOGIN</string>
+    <string name="prompt_userId">User ID</string>
+    <string name="prompt_password">Password</string>
+
+    <!-- Feedback Icon Layout -->
+
+    <!-- Splash Screen Layout -->
+
+    <!-- Authenticator -->
+    <string name="authenticator_account_type">com.igsdigital.premierfeedback</string>
+    <string name="authenticator_account_lable">Premier Feedback</string>
+
+    <!--   Comments Layout -->
+
+    <!-- Questions Layout -->
+
+    <!-- Question -->
+    <string name="staff_attitude">Staff Attitude</string>
+    <string name="lack_of_awareness">Lack of Awareness</string>
+    <string name="staff_unavailability">Staff Unavailability</string>
+    <string name="system_downtime">System Downtime</string>
+    <string name="transaction_time">Transaction Time</string>
+
+    <!-- SharedPrefs Keys -->
+    <string name="usernamekey">username</string>
+    <string name="userpasskey">password</string>
+    <string name="userloggedinkey">loggedin</string>
+    <string name="useridkey">username</string>
+
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <!-- Array for Drawer list-->
+    <string-array name="drawable_menu">
+        <item>Feedback</item>
+        <item>Reports</item>
+        <item>Login</item>
+
+    </string-array>
+</resources>

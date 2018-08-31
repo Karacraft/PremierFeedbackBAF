@@ -1,0 +1,115 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.igsdigital.premierfeedback">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- Required by Authenticator -->
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <!-- Required by SyncAdapter -->
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".customerfeedback.DashboardActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".customerfeedback.SplashActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="landscape">
+
+        </activity>
+        <activity
+            android:name=".customerfeedback.SplashDuplicateActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="landscape">
+
+        </activity>
+        <activity
+            android:name=".customerfeedback.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="landscape">
+        </activity>
+
+        <activity
+            android:name=".customerfeedback.SelectionActivity"
+            android:label="@string/title_activity_feedbackicons"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name=".customerfeedback.ReportsActivity"
+            android:label="@string/title_activity_statistics"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name=".customerfeedback.ThanksActivity"
+            android:label="@string/title_activity_thanks"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name=".customerfeedback.QuestionsActivity"
+            android:label="@string/title_activity_questions"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name=".customerfeedback.CustomerListViewActivity"
+            android:label="@string/title_customerlistview"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="landscape">
+        </activity>
+
+        <!--  This Completes the Showing of Service in Android Accounts -->
+        <service android:name="com.igsdigital.premierfeedback.account.AuthenticatorService">
+
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator"/>
+            </intent-filter>
+
+            <meta-data android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator"
+                />
+        </service>
+        <!--  SyncService -->
+        <service
+            android:name="com.igsdigital.premierfeedback.account.SyncService"
+            android:exported="true"
+            android:process=":sync">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter"
+                android:resource="@xml/syncadapter" />
+        </service>
+
+        <!--    Add Content Provider Here , Currently only Stub -->
+        <provider
+            android:authorities="com.igs.account"
+            android:name="com.igsdigital.premierfeedback.account.StubProvider"
+            android:exported="false"
+            android:syncable="true"/>
+        <!--    Add Content Provider Here , Currently only Stub -->
+    </application>
+
+
+</manifest>

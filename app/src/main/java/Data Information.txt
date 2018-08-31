@@ -1,0 +1,14 @@
+Data Information File.
+
+Purpose:
+Enter all Application specific data in this file.
+
+Database:
+Define your tables, columns here , then convert into schema
+
+Packages:
+account >> holds Account Authenticator, Sync Adapters, Authenticator Service & Content Provider
+customerfeedback >> All Activities
+data >> All Sqlite related classes, Objects
+
+
